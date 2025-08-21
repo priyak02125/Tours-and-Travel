@@ -1,36 +1,36 @@
 import { ArrowBigRight } from "lucide-react";
-import Link from "next/link";
 
 export default function PopularLocation() {
-  const popularCities = [
+  const popularLocations = [
     {
       name: "UAE",
-      imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Hamburg",
+      imageUrl: "/uae.jpg",
     },
     {
       name: "THAILAND",
-      imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Berlin",
+      imageUrl: "/thailand.jpg",
+    },
+
+    {
+      name: "BALI",
+      imageUrl: "bali.jpg",
     },
     {
       name: "MALDIVES",
-      imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Munchen",
+      imageUrl: "maldiv.jpg",
     },
     {
-      name: "BALI",
-      imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Dusseldorf",
+      name: "SINGAPORE",
+      imageUrl: "/singapore.jpg",
     },
-    // {
-    //   name: "SINGAPORE",
-    //   imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Koln",
-    // },
-    // {
-    //   name: "DUBAI",
-    //   imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Frankfurt",
-    // },
-    // {
-    //   name: "HANNOVER",
-    //   imageUrl: "https://placehold.co/400x300/e9e9e9/black?text=Hannover",
-    // },
+    {
+      name: "KASHMIR",
+      imageUrl: "./kashmir.jpg",
+    },
+    {
+      name: "DUBAI",
+      imageUrl: "/dubai.jpg",
+    },
   ];
 
   return (
@@ -40,41 +40,19 @@ export default function PopularLocation() {
       >
         {/* Popular Cities Page Content */}
         <main className="container mx-auto px-4 py-8 flex-grow pt-20">
-          <div className="text-center my-8">
-            <h1 className="text-5xl font-extrabold font-kumbh-sans text-gray-900 tracking-wide">
+          <div className="text-center">
+            <h1 className="text-5xl py-8 font-extrabold font-kumbh-sans text-gray-900 tracking-wide">
               POPULAR LOCATIONS
             </h1>
           </div>
 
-          <div className="flex justify-center space-x-2 sm:space-x-4 mb-8 text-gray-700 text-sm sm:text-base">
-            <Link
-              href="#"
-              className="font-bold border-b-2 border-cyan-500 pb-1"
-            >
-              All
-            </Link>
-            <Link
-              href="#"
-              className="hover:text-cyan-500 transition-colors duration-300"
-            >
-              InterNational
-            </Link>
-            <Link
-              href="#"
-              className="hover:text-cyan-500 transition-colors duration-300"
-            >
-              National
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 lg:gap-6 lg:px-40 py-10">
-            {popularCities.map((city, index) => {
-              return (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 lg:px-40 py-10 h-full">
+            {/* First Column - 2 Images */}
+            <div className="grid grid-rows-2 gap-6 lg:gap-8 h-screen">
+              {popularLocations.slice(0, 2).map((city, index) => (
                 <div
                   key={index}
-                  className={`${
-                    index % 2 === 1 ? "mt-16" : "mt-0"
-                  } relative w-full h-88 overflow-hidden group shadow-lg`}
+                  className="relative overflow-hidden shadow-lg group h-full"
                 >
                   <img
                     src={city.imageUrl}
@@ -82,15 +60,61 @@ export default function PopularLocation() {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2  text-white">
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
                     <h3 className="text-xl sm:text-2xl font-bold font-kumbh-sans">
                       {city.name}
                     </h3>
-                    <p className="text-sm text-center">521 CITIES</p>
+                    <p className="text-sm">521 CITIES</p>
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+
+            {/* Middle Column - 3 Images */}
+            <div className="grid grid-rows-3 gap-6 lg:gap-8 h-screen">
+              {popularLocations.slice(2, 5).map((city, index) => (
+                <div
+                  key={index}
+                  className="relative overflow-hidden shadow-lg group h-full"
+                >
+                  <img
+                    src={city.imageUrl}
+                    alt={city.name}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
+                    <h3 className="text-xl sm:text-2xl font-bold font-kumbh-sans">
+                      {city.name}
+                    </h3>
+                    <p className="text-sm">521 CITIES</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Last Column - 2 Images */}
+            <div className="grid grid-rows-2 gap-6 lg:gap-8 h-screen">
+              {popularLocations.slice(5, 7).map((city, index) => (
+                <div
+                  key={index}
+                  className="relative overflow-hidden shadow-lg group h-full"
+                >
+                  <img
+                    src={city.imageUrl}
+                    alt={city.name}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
+                    <h3 className="text-xl sm:text-2xl font-bold font-kumbh-sans">
+                      {city.name}
+                    </h3>
+                    <p className="text-sm">521 CITIES</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="flex justify-center my-10">
