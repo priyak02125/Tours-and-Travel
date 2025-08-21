@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import PopularLocation from "@/components/PupularLocation";
+import PopularLocation from "@/components/PopularLocation";
 
 export default function Home() {
   return (
@@ -27,7 +25,6 @@ export default function Home() {
         `}
       </style>
       <PopularLocation />
-      <Footer />
     </>
   );
 }
