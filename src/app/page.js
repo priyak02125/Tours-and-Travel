@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import PopularLocation from "@/components/PopularLocation";
+import PopularLocation from "@/components/PupularLocation";
 
 export default function Home() {
   return (
