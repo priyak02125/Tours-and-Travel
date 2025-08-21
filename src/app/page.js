@@ -1,5 +1,6 @@
+import Hero from "@/components/home/Hero";
 import PopularLocation from "@/components/PopularLocation";
-
+import Packages from "@/components/home/Packages";
 export default function Home() {
   return (
     <>
@@ -24,7 +25,9 @@ export default function Home() {
           }
         `}
       </style>
-      <PopularLocation />
+      {/* <Hero />
+      <PopularLocation /> */}
+      <Packages/>
     </>
   );
 }

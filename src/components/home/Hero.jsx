@@ -31,12 +31,12 @@ const cards = [
     title: "Udaipur, India",
     description: "Discover royal palaces and serene lakes in the city of lakes.",
   },
-  {
-    photo: "/dubai.jpg",
-    alt: "dubai",
-    title: "Dubai, UAE",
-    description: "Explore futuristic skylines and luxury in the desert.",
-  },
+//   {
+//     photo: "/dubai.jpg",
+//     alt: "dubai",
+//     title: "Dubai, UAE",
+//     description: "Explore futuristic skylines and luxury in the desert.",
+//   },
   {
     photo: "/dubai-building.jpg",
     alt: "dubai",
