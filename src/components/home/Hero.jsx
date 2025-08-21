@@ -37,6 +37,12 @@ const cards = [
     title: "Dubai, UAE",
     description: "Explore futuristic skylines and luxury in the desert.",
   },
+  {
+    photo: "/dubai-building.jpg",
+    alt: "dubai",
+    title: "Dubai, UAE",
+    description: "Explore futuristic skylines and luxury in the desert.",
+  },
 ];
 
 // Custom arrows
