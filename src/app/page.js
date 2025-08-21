@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import IndianPlaces from "@/components/IndianPlaces";
 import Location from "@/components/ForeignLocations";
 import BookingPage from "@/components/Booking";
+import Packages from "@/components/Packages";
 
 const worldWide = [
   {
@@ -85,7 +86,6 @@ const IndianLocations = [
     tagline: "Adventure at the top of the world 🏔️",
   },
 ];
-import Packages from "@/components/home/Packages";
 export default function Home() {
   return (
     <>
@@ -116,10 +116,8 @@ export default function Home() {
         location={IndianLocations}
         text=" Best Indian Places to Visit"
       />
+      <Packages />
       <BookingPage />
-      {/* <Hero />
-      <PopularLocation /> */}
-      <Packages/>
     </>
   );
 }

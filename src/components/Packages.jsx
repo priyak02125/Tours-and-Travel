@@ -37,11 +37,11 @@ const cards = [
     description: "Ladakh Packages",
     price: "₹ 65,000",
   },
-  {
-    photo: "/kashmir.jpg",
-    description: "Kashmir Packages",
-    price: "₹ 48,000",
-  },
+  // {
+  //   photo: "/ladakh.jpg",
+  //   description: "Kashmir Packages",
+  //   price: "₹ 48,000",
+  // },
 ];
 
 // Custom Arrows
@@ -68,7 +68,7 @@ const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
   autoplay: true,
@@ -99,13 +99,13 @@ const settings = {
 
 function Packages() {
   return (
-    <div className="py-31 bg-white w-full">
-      <div className="px-15">
+    <div className="py-31 lg:px-40 bg-white w-full">
+      <div className="">
         <Slider {...settings}>
           {cards.map((card, index) => (
             <div key={index} className="px-2">
               <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 w-full">
-                <div className="relative h-50 w-full">
+                <div className="relative h-64 w-full">
                   <img
                     src={card.photo}
                     alt={card.description}
