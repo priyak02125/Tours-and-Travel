@@ -85,7 +85,7 @@ const IndianLocations = [
     tagline: "Adventure at the top of the world 🏔️",
   },
 ];
-
+import Packages from "@/components/home/Packages";
 export default function Home() {
   return (
     <>
@@ -117,6 +117,9 @@ export default function Home() {
         text=" Best Indian Places to Visit"
       />
       <BookingPage />
+      {/* <Hero />
+      <PopularLocation /> */}
+      <Packages/>
     </>
   );
 }
