@@ -67,7 +67,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 2000,
   arrows: true,
   prevArrow: <PrevArrow />,
   nextArrow: <NextArrow />,
