@@ -41,13 +41,13 @@ const Header = () => {
         <div className="hidden lg:flex items-center space-x-2 lg:space-x-4">
           <Link
             href="/booking"
-            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-400 text-white rounded-full text-xs sm:text-sm md:text-base font-semibold shadow-md 
-            hover:bg-orange-300 transition-colors duration-300 flex items-center justify-center space-x-1 sm:space-x-2"
+            className="group px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-400 text-white rounded-full text-xs sm:text-sm md:text-base font-semibold shadow-md 
+            hover:bg-black transition-colors duration-300 flex items-center justify-center space-x-1 sm:space-x-2"
           >
             <span>Book Now</span>
             <ArrowBigRight
-              size={18}
-              className="-rotate-45 transition-transform duration-300 text-white bg-black rounded-full p-0.5 sm:p-1"
+              size={28}
+              className="-rotate-45 transition-transform duration-300 group-hover:bg-orange-400  text-white bg-black rounded-full p-0.5 sm:p-1"
             />
           </Link>
         </div>

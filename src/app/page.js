@@ -91,35 +91,42 @@ const IndianLocations = [
 const indiantour = [
   {
     photo: "/goa.avif",
-    description: "Goa Packages",
+    location:"Goa, Maharastra",
+    description: "Goa – Beaches and vibrant nightlife",
     price: "₹ 45,999",
   },
   {
     photo: "/HawaMahal.jpg",
-    description: "Jaipur Packages",
+    location:"Jaipur, Rajasthan",
+    description: "Jaipur – Explore forts and royal heritage",
     price: "₹ 25,999",
   },
   {
     photo: "/uttrakhand.avif",
-    description: "Uttarakhand Packages",
+    location:"Rishikesh, Uttarakhand ",
+    description: "Uttarakhand – Mountains and spiritual vibes",
     price: "₹ 35,000",
   },
   {
     photo: "/gujrat.jpg",
-    description: "Gujarat Packages",
+     location:"Gujarat",
+    description: "Gujarat – Culture and white desert",
     price: "₹ 29,500",
   },
   {
     photo: "/andaman.jpg",
-    description: "Andaman Packages",
+    location:"Andaman and Nicobar",
+    description: "Andaman – Islands and blue waters",
     price: "₹ 55,000",
   },
   {
     photo: "/ladak.jpg",
-    description: "Ladakh Packages",
+     location:"Ladakh",
+    description: "Ladakh – High passes and stunning views",
     price: "₹ 65,000",
   },
 ];
+
 
 const honeymoon = [
   // National Packages
@@ -198,43 +205,43 @@ const spiritual = [
   {
     photo: "/rishikesh-temple.jpg",
     description: "Peaceful prayers by the Ganga.",
-    location: "Rishikesh, India",
+    location: "Rishikesh",
     price: "₹ 18,000",
   },
   {
     photo: "/golden-temple.avif",
     description: "Divine serenity at the Golden Temple.",
-    location: "Amritsar, India",
+    location: "Amritsar",
     price: "₹ 22,000",
   },
   {
     photo: "/kashi vishwanath temple.jpg",
     description: "Sacred chants on the ghats of Kashi.",
-    location: "Varanasi, India",
+    location: "Varanasi",
     price: "₹ 20,000",
   },
   {
     photo: "/haridwar.avif",
     description: "Spiritual dip in holy waters.",
-    location: "Haridwar, India",
+    location: "Haridwar",
     price: "₹ 16,000",
   },
   {
     photo: "/tiruvannamalai-temple.jpg",
     description: "Feel the divine energy of Arunachala.",
-    location: "Tiruvannamalai, India",
+    location: "Tiruvannamalai",
     price: "₹ 24,000",
   },
   {
     photo: "/kedarnath-temple.avif",
     description: "Pilgrimage to the abode of Lord Shiva.",
-    location: "Kedarnath, India",
+    location: "Kedarnath",
     price: "₹ 28,000",
   },
   {
     photo: "/jaganath puri.jpg",
-    description: "Soulful journey to Shirdi’s blessings.",
-    location: "Shirdi, India",
+    description: "Offer prayers at Jagannath’s sacred home.",
+    location: "Puri",
     price: "₹ 19,500",
   },
   // {
@@ -282,7 +289,7 @@ export default function Home() {
         `}
       </style>
       <Hero />
-      <ForeignPlaces
+      {/* <ForeignPlaces
         location={worldWide}
         text=" Best Foreign Places to Visit"
       />
@@ -294,7 +301,7 @@ export default function Home() {
        <Packages title="Your Dream Honeymoon Awaits" data={honeymoon}/>
         <Packages title="Walk the Spiritual Paths of India" data={spiritual}/>
       <BookingPage />
-      <Contact />
+      <Contact /> */}
     </>
   );
 }

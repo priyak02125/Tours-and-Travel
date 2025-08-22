@@ -181,7 +181,7 @@ export default function BookingPage() {
 
             <button
               type="submit"
-              className="font-kumbh-sans col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
+              className="font-kumbh-sans cursor-pointer col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
             >
               Search Hotels
             </button>
@@ -198,7 +198,7 @@ export default function BookingPage() {
               <input
                 type="text"
                 placeholder="Enter destination"
-                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans cursor-pointer w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
 
@@ -208,7 +208,7 @@ export default function BookingPage() {
               </label>
               <input
                 type="date"
-                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans  w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
             <div>
@@ -217,7 +217,7 @@ export default function BookingPage() {
               </label>
               <input
                 type="date"
-                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans cursor-pointer w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
 
@@ -249,7 +249,7 @@ export default function BookingPage() {
 
             <button
               type="submit"
-              className="font-kumbh-sans col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
+              className="font-kumbh-sans cursor-pointer col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
             >
               Search Packages
             </button>
