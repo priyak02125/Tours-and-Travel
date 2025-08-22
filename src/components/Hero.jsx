@@ -20,6 +20,13 @@ const cards = [
     description: "Relax on sun-kissed beaches with crystal clear waters.",
   },
   {
+    photo: "/sydney-australia.jpg",
+    alt: "sydney-australias",
+    title: "Sydney Opera House & Harbour",
+    description:
+      "Explore the iconic Sydney Opera House and enjoy stunning harbour views.",
+  },
+  {
     photo: "/maldivesbeaches.jpg",
     alt: "maldives beaches",
     title: "Maldives Beaches",
@@ -43,7 +50,7 @@ const cards = [
 // Custom arrows
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 left-2 md:left-5 transform -translate-y-1/2 bg-[#e02454]/10 hover:bg-[#bcbaf4] text-white rounded-full p-1 md:p-2 cursor-pointer z-10 hover:scale-110 transition"
+    className="absolute top-1/2 left-2 md:left-5 transform -translate-y-1/2 bg-[#e02454]/10 hover:bg-black/40 text-white rounded-full p-1 md:p-2 cursor-pointer z-10 hover:scale-110 transition"
     onClick={onClick}
   >
     <IoIosArrowBack size={32} className="md:size-10" />
@@ -52,7 +59,7 @@ const PrevArrow = ({ onClick }) => (
 
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 right-2 md:right-5 transform -translate-y-1/2 bg-[#e02454]/10 hover:bg-[#bcbaf4] text-white rounded-full p-1 md:p-2 cursor-pointer z-10 hover:scale-110 transition"
+    className="absolute top-1/2 right-2 md:right-5 transform -translate-y-1/2 bg-[#e02454]/10 hover:bg-black/40 text-white rounded-full p-1 md:p-2 cursor-pointer z-10 hover:scale-110 transition"
     onClick={onClick}
   >
     <IoIosArrowForward size={32} className="md:size-10" />
@@ -80,7 +87,7 @@ function Hero() {
         <Slider {...settings}>
           {cards.map((item, index) => (
             <div key={index}>
-              <div className="relative w-full h-full md:h-[450px] lg:h-[490px]">
+              <div className="relative w-full h-full md:h-[450px] lg:h-[490px]  inset-0 bg-black/40">
                 <img
                   src={item.photo}
                   alt={item.alt || `slide-${index}`}

@@ -12,8 +12,11 @@ export default function BookingPage() {
   const [activeTab, setActiveTab] = useState("flights");
 
   return (
-    <div className="font-kumbh-sans bg-gray-100 flex flex-col items-center pb-10 px-4">
-      <h1 className="font-kumbh-sans text-4xl font-extrabold text-gray-900 tracking-wide text-center py-8">
+    <div
+      id="booking"
+      className="font-kumbh-sans bg-gray-100 flex flex-col items-center py-12 px-4"
+    >
+      <h1 className="font-kumbh-sans text-4xl font-extrabold text-gray-900 tracking-wide text-center">
         Book Your Trip
       </h1>
 

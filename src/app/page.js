@@ -191,7 +191,7 @@ const honeymoon = [
     description: "Luxury, lights & desert magic.",
     location: "Dubai, UAE",
     price: "₹ 1,30,000",
-  }
+  },
 ];
 
 const spiritual = [
@@ -208,7 +208,7 @@ const spiritual = [
     price: "₹ 22,000",
   },
   {
-    photo: "/kashi vishwanath temple.jpg",
+    photo: "/kashi-vishwanath-temple.jpg",
     description: "Sacred chants on the ghats of Kashi.",
     location: "Varanasi, India",
     price: "₹ 20,000",
@@ -254,7 +254,7 @@ const spiritual = [
     description: "Chant and connect at ISKCON Vrindavan.",
     location: "Vrindavan, India",
     price: "₹ 17,000",
-  }
+  },
 ];
 
 export default function Home() {
@@ -290,9 +290,9 @@ export default function Home() {
         location={IndianLocations}
         text=" Best Indian Places to Visit"
       />
-      <Packages title="Explore India Your Way" data={indiantour}/>
-       <Packages title="Your Dream Honeymoon Awaits" data={honeymoon}/>
-        <Packages title="Walk the Spiritual Paths of India" data={spiritual}/>
+      <Packages title="Explore India Your Way" data={indiantour} />
+      <Packages title="Your Dream Honeymoon Awaits" data={honeymoon} />
+      <Packages title="Walk the Spiritual Paths of India" data={spiritual} />
       <BookingPage />
       <Contact />
     </>

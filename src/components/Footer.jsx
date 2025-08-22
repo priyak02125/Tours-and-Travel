@@ -4,13 +4,13 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full bg-gray-100 text-gray-700 border-t border-gray-300 py-10 font-geist-sans">
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+      <div className="w-full mx-auto px-6 md:px-12 lg:px-40">
         {/* Grid layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-between text-center md:text-left">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Tours & Travel</h3>
-            <p className="text-sm">
+            <p className="text-sm lg:w-48">
               Explore the world with us. Discover breathtaking destinations,
               affordable packages, and unforgettable memories.
             </p>
@@ -21,29 +21,20 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-blue-600">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/destinations" className="hover:text-blue-600">
+                <a href="#foreign-places" className="hover:text-blue-600">
                   Destinations
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/packages" className="hover:text-blue-600">
+                <a href="#packages" className="hover:text-blue-600">
                   Packages
-                </Link>
+                </a>
               </li>
+
               <li>
-                <Link href="/about" className="hover:text-blue-600">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-blue-600">
+                <a href="#contact" className="hover:text-blue-600">
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
