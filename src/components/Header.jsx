@@ -22,7 +22,7 @@ const Header = () => {
         {/* Logo */}
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-500 tracking-wider">
           <a
-            href="#home"
+            href="/"
             className="hover:opacity-80 transition-opacity duration-300"
           >
             Tours & Travel
