@@ -1,7 +1,7 @@
 "use client";
 import { ArrowBigRight } from "lucide-react";
 
-export default function Location({ location, text }) {
+export default function ForeignPlaces({ location, text }) {
   return (
     <div className="font-kumbh-sans antialiased bg-gray-100 min-h-screen text-black flex flex-col">
       {/* Popular Cities Page Content */}

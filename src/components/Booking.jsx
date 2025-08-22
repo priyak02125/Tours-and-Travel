@@ -13,131 +13,243 @@ export default function BookingPage() {
 
   return (
     <div className="font-kumbh-sans bg-gray-100 flex flex-col items-center pb-10 px-4">
-      <h1 className="text-4xl font-extrabold text-gray-900 tracking-wide text-center mb-10">
+      <h1 className="font-kumbh-sans text-4xl font-extrabold text-gray-900 tracking-wide text-center py-8">
         Book Your Trip
       </h1>
 
       {/* Tabs */}
-      <div className="flex space-x-4 bg-white p-2 rounded-xl shadow-lg mb-10">
+      <div className="font-kumbh-sans flex space-x-4 bg-white p-2 rounded-xl shadow-lg mb-10">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center space-x-2 px-6 py-2 rounded-lg transition-colors duration-300 ${
+            className={`font-kumbh-sans flex items-center space-x-2 px-6 py-2 rounded-lg transition-colors duration-300 ${
               activeTab === tab.id
                 ? "bg-cyan-500 text-white font-semibold"
                 : "text-gray-700 hover:bg-gray-200"
             }`}
           >
             {tab.icon}
-            <span>{tab.label}</span>
+            <span className="font-kumbh-sans">{tab.label}</span>
           </button>
         ))}
       </div>
 
       {/* Booking Form */}
-      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-2xl">
+      <div className="font-kumbh-sans bg-white shadow-xl rounded-2xl p-8 w-full max-w-2xl">
+        {/* Flights Form */}
         {activeTab === "flights" && (
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form className="font-kumbh-sans grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-gray-700 mb-2">From</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                From
+              </label>
               <input
                 type="text"
                 placeholder="Enter city"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 mb-2">To</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                To
+              </label>
               <input
                 type="text"
                 placeholder="Enter city"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
+
             <div>
-              <label className="block text-gray-700 mb-2">Date</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Departure Date
+              </label>
               <input
                 type="date"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 mb-2">Time</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Return Date
+              </label>
               <input
-                type="time"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                type="date"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
+
+            <div>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Passengers
+              </label>
+              <input
+                type="number"
+                placeholder="Number of travellers"
+                min="1"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              />
+            </div>
+            <div>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Class
+              </label>
+              <select className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                <option>Economy</option>
+                <option>Premium Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+              </select>
+            </div>
+
             <button
               type="submit"
-              className="col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
+              className="font-kumbh-sans col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
             >
               Search Flights
             </button>
           </form>
         )}
 
+        {/* Hotels Form */}
         {activeTab === "hotels" && (
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="md:col-span-2">
-              <label className="block text-gray-700 mb-2">Location</label>
+          <form className="font-kumbh-sans grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="font-kumbh-sans md:col-span-2">
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Location
+              </label>
               <input
                 type="text"
                 placeholder="Enter city or hotel name"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 mb-2">Check-in</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Check-in
+              </label>
               <input
                 type="date"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 mb-2">Check-out</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Check-out
+              </label>
               <input
                 type="date"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
+
+            <div>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Guests
+              </label>
+              <input
+                type="number"
+                placeholder="Number of persons"
+                min="1"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              />
+            </div>
+            <div>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Rooms
+              </label>
+              <input
+                type="number"
+                placeholder="Number of rooms"
+                min="1"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              />
+            </div>
+
+            <div className="font-kumbh-sans md:col-span-2">
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Room Type
+              </label>
+              <select className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                <option>Single</option>
+                <option>Double</option>
+                <option>Suite</option>
+                <option>Deluxe</option>
+              </select>
+            </div>
+
             <button
               type="submit"
-              className="col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
+              className="font-kumbh-sans col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
             >
               Search Hotels
             </button>
           </form>
         )}
 
+        {/* Tours Form */}
         {activeTab === "tours" && (
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="md:col-span-2">
-              <label className="block text-gray-700 mb-2">Destination</label>
+          <form className="font-kumbh-sans grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="font-kumbh-sans md:col-span-2">
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Destination
+              </label>
               <input
                 type="text"
                 placeholder="Enter destination"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              />
+            </div>
+
+            <div>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Start Date
+              </label>
+              <input
+                type="date"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
             <div>
-              <label className="block text-gray-700 mb-2">Start Date</label>
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                End Date
+              </label>
               <input
                 type="date"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
-            <div>
-              <label className="block text-gray-700 mb-2">End Date</label>
+
+            <div className="font-kumbh-sans md:col-span-2">
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Guests
+              </label>
               <input
-                type="date"
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                type="number"
+                placeholder="Number of guests"
+                min="1"
+                className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
+
+            {/* Filters */}
+            <div className="font-kumbh-sans md:col-span-2">
+              <label className="font-kumbh-sans block text-gray-700 mb-2">
+                Filters
+              </label>
+              <select className="font-kumbh-sans w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                <option>Budget Friendly</option>
+                <option>Luxury</option>
+                <option>International Destination</option>
+                <option>Family Packages</option>
+                <option>Honeymoon</option>
+              </select>
+            </div>
+
             <button
               type="submit"
-              className="col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
+              className="font-kumbh-sans col-span-1 md:col-span-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-lg transition duration-300"
             >
               Search Packages
             </button>
