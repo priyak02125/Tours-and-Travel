@@ -1,48 +1,12 @@
 "use client";
 import Slider from "react-slick";
-import React, { useRef } from "react";
+import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Travel package data
-const cards = [
-  {
-    photo: "/goa.avif",
-    description: "Goa Packages",
-    price: "₹ 45,999",
-  },
-  {
-    photo: "/HawaMahal.jpg",
-    description: "Jaipur Packages",
-    price: "₹ 25,999",
-  },
-  {
-    photo: "/uttrakhand.avif",
-    description: "Uttarakhand Packages",
-    price: "₹ 35,000",
-  },
-  {
-    photo: "/gujrat.jpg",
-    description: "Gujarat Packages",
-    price: "₹ 29,500",
-  },
-  {
-    photo: "/andaman.jpg",
-    description: "Andaman Packages",
-    price: "₹ 55,000",
-  },
-  {
-    photo: "/ladak.jpg",
-    description: "Ladakh Packages",
-    price: "₹ 65,000",
-  },
-  // {
-  //   photo: "/ladakh.jpg",
-  //   description: "Kashmir Packages",
-  //   price: "₹ 48,000",
-  // },
-];
+
 
 // Custom Arrows
 const PrevArrow = ({ onClick }) => (
@@ -72,7 +36,7 @@ const settings = {
   slidesToScroll: 1,
   arrows: true,
   autoplay: true,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 2000,
   prevArrow: <PrevArrow />,
   nextArrow: <NextArrow />,
   responsive: [
@@ -97,32 +61,56 @@ const settings = {
   ],
 };
 
-function Packages() {
+function Packages({title,data}) {
   return (
-    <div className="py-31 lg:px-40 bg-white w-full">
-      <div className="">
-        <Slider {...settings}>
-          {cards.map((card, index) => (
-            <div key={index} className="px-2">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 w-full">
-                <div className="relative h-64 w-full">
-                  <img
-                    src={card.photo}
-                    alt={card.description}
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute top-2 left-2 bg-black/60 text-white px-2 py-1 text-sm rounded">
-                    {card.price}
-                  </div>
-                </div>
-                <div className="p-3 text-center text-gray-800 font-semibold">
-                  {card.description}
+    <div className="py-26 px-4 lg:px-40 bg-white w-full">
+      {/* Heading */}
+      <h2 className="text-xl md:text-2xl font-bold text-center text-cyan-500 mb-10">
+        Tours and Travel – <span className="text-gray-800">{title}</span>
+      </h2>
+
+      {/* Slider */}
+      <Slider {...settings}>
+        {data.map((card, index) => (
+          <div key={index} className="px-2">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 w-full hover:shadow-xl transition-shadow duration-300">
+              {/* <div className="relative h-54 w-full">
+                <img
+                  src={card.photo}
+                  alt={card.description}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium">
+                  {card.price}
                 </div>
               </div>
+              <div className="p-4 text-center text-gray-800 font-semibold text-lg">
+                {card.description}
+              </div> */}
+              <div className="relative h-54 w-full group">
+  <img
+    src={card.photo}
+    alt={card.description}
+    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+  />
+
+  {/* Transparent curtain overlay */}
+  <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
+    <p className="text-white font-semibold text-lg text-center z-10">
+      {card.description}
+    </p>
+  </div>
+
+  {/* Price badge */}
+  <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium z-20">
+    {card.price}
+  </div>
+</div>
+
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
