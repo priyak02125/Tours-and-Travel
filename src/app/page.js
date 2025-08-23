@@ -288,16 +288,16 @@ export default function Home() {
           }
         `}
       </style>
-      <Hero />
-      {/* <ForeignPlaces
+      {/* <Hero />
+      <ForeignPlaces
         location={worldWide}
         text=" Best Foreign Places to Visit"
-      />
+      /> */}
       <IndianPlaces
         location={IndianLocations}
         text=" Best Indian Places to Visit"
       />
-      <Packages title="Explore India Your Way" data={indiantour}/>
+      {/* <Packages title="Explore India Your Way" data={indiantour}/>
        <Packages title="Your Dream Honeymoon Awaits" data={honeymoon}/>
         <Packages title="Walk the Spiritual Paths of India" data={spiritual}/>
       <BookingPage />

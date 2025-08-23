@@ -1,10 +1,8 @@
 "use client";
-
 import Slider from "react-slick";
 import { ArrowBigRight, ArrowBigLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
 // Arrows for the carousel
 function NextArrow(props) {
   const { onClick } = props;
@@ -99,8 +97,8 @@ function FlipCard({ city }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl"></div>
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center px-2">
-            <h3 className="text-xl sm:text-2xl font-bold">{city.name}</h3>
-            <p className="text-sm">{city.tagline}</p>
+            {/* <h3 className="text-xl sm:text-2xl font-bold">{city.name}</h3>
+            <p className="text-sm">{city.tagline}</p> */}
           </div>
         </div>
 
