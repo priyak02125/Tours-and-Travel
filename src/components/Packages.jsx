@@ -62,45 +62,34 @@ const settings = {
 
 function Packages({ title, data }) {
   return (
-    <div className="py-16  px-4 lg:px-40 bg-white w-full">
 
+    <div className="py-16  px-4 lg:px-40 bg-white w-full">
       {/* Heading */}
       <h2 className="text-xl md:text-3xl font-bold text-center text-cyan-500 mb-10">
         Tours and Travel – <span className="text-gray-800">{title}</span>
       </h2>
-
       {/* Slider */}
       <Slider {...settings}>
         {data.map((card, index) => (
           <div key={index} className="px-2">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 w-full hover:shadow-xl transition-shadow duration-300">
-              {/* <div className="relative h-54 w-full">
-                <img
-                  src={card.photo}
-                  alt={card.description}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-                <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium">
-                  {card.price}
-                </div>
-              </div>
-              <div className="p-4 text-center text-gray-800 font-semibold text-lg">
-                {card.description}
-              </div> */}
-              <div className="relative group h-54 w-full group">
-
+              {/* Card Container */}
+              <div className="relative group h-54 w-full">
+                {/* Image */}
                 <img
                   src={card.photo}
                   alt={card.description}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
 
-                {/* Transparent curtain overlay */}
-                <div className="absolute h-0 top-0 group-hover:h-full duration-300 inset-0 bg-black/40 flex items-end justify-center ">
+                {/* Transparent overlay with description */}
+                <div className="absolute h-0 top-0 group-hover:h-full duration-300 inset-0 bg-black/40 flex items-end justify-center">
                   <p className="text-white group-hover:my-auto px-4 font-semibold text-lg text-center z-10">
                     {card.description}
                   </p>
                 </div>
+
+                {/* Location at bottom */}
                 <div className="absolute bottom-0 text-xl bg-black/60 group-hover:h-0 duration-400 text-center text-white w-full">
                   {card.location}
                 </div>
@@ -113,6 +102,7 @@ function Packages({ title, data }) {
               {/* Price badge */}
               <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium z-20">
                 {card.price}
+
               </div>
             </div>
           </div>

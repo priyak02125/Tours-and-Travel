@@ -98,42 +98,41 @@ const IndianLocations = [
 const indiantour = [
   {
     photo: "/goa.avif",
-    location:"Goa, Maharastra",
+    location: "Goa, Maharastra",
     description: "Goa – Beaches and vibrant nightlife",
     price: "₹ 45,999",
   },
   {
     photo: "/HawaMahal.jpg",
-    location:"Jaipur, Rajasthan",
+    location: "Jaipur, Rajasthan",
     description: "Jaipur – Explore forts and royal heritage",
     price: "₹ 25,999",
   },
   {
     photo: "/uttrakhand.avif",
-    location:"Rishikesh, Uttarakhand ",
+    location: "Rishikesh, Uttarakhand ",
     description: "Uttarakhand – Mountains and spiritual vibes",
     price: "₹ 35,000",
   },
   {
     photo: "/gujrat.jpg",
-     location:"Gujarat",
+    location: "Gujarat",
     description: "Gujarat – Culture and white desert",
     price: "₹ 29,500",
   },
   {
     photo: "/andaman.jpg",
-    location:"Andaman and Nicobar",
+    location: "Andaman and Nicobar",
     description: "Andaman – Islands and blue waters",
     price: "₹ 55,000",
   },
   {
     photo: "/ladak.jpg",
-     location:"Ladakh",
+    location: "Ladakh",
     description: "Ladakh – High passes and stunning views",
     price: "₹ 65,000",
   },
 ];
-
 
 const honeymoon = [
   // National Packages
@@ -305,9 +304,11 @@ export default function Home() {
         text=" Best Indian Places to Visit"
       />
 
+
       <Packages title="Explore India Your Way" data={indiantour}/>
        <Packages title="Your Dream Honeymoon Awaits" data={honeymoon}/>
         <Packages title="Walk the Spiritual Paths of India" data={spiritual}/>
+
       <BookingPage />
       <Contact />
     </>

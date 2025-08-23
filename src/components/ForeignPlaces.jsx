@@ -1,12 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
-import { ArrowBigRight } from "lucide-react";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 export default function ForeignPlaces({ location, text }) {
   return (
-    <div className="font-kumbh-sans antialiased bg-gray-100 min-h-screen text-black flex flex-col">
-
+    <div
+      id="foreign-places"
+      className=" font-kumbh-sans antialiased bg-gray-100 min-h-screen text-black flex flex-col lg:py-16"
+    >
       <main className="container mx-auto px-4 py-8 flex-grow">
         {/* Heading */}
         <div className="text-center">
