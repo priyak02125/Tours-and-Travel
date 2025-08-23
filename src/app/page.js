@@ -10,38 +10,43 @@ const worldWide = [
     name: "DUBAI",
     imageUrl: "abroad/dubai.webp",
     tagline: "Desert dreams & futuristic wonders 🌟",
+    description: "Experience the dazzling skyline, luxury shopping, and desert safaris of Dubai — a city where innovation meets tradition."
   },
   {
     name: "SINGAPORE",
     imageUrl: "abroad/singapore.webp",
     tagline: "A city in a garden 🌸",
+    description: "A blend of modern architecture, rich culture, and green spaces. Explore Marina Bay, Sentosa Island, and world-famous street food."
   },
-
   {
     name: "BALI",
     imageUrl: "abroad/bali.webp",
     tagline: "Island of gods & hidden beaches 🌴",
+    description: "Unwind on serene beaches, explore lush jungles and rice terraces, and immerse yourself in the spiritual culture of Bali."
   },
   {
     name: "MALDIVES",
     imageUrl: "abroad/maldiv.webp",
     tagline: "Turquoise waters & overwater villas 🏝️",
+    description: "Escape to paradise with crystal-clear waters, coral reefs, and luxurious overwater bungalows — perfect for honeymooners and divers alike."
   },
-
   {
     name: "THAILAND",
     imageUrl: "abroad/thailand.webp",
     tagline: "The land of smiles & street food 🍜",
+    description: "From the bustling streets of Bangkok to the tranquil islands of Phuket and Krabi, Thailand offers adventure, culture, and cuisine."
   },
   {
     name: "SWITZERLAND",
     imageUrl: "abroad/switzerland.webp",
     tagline: "Snow peaks & chocolate dreams 🍫🏔️",
+    description: "Discover fairy-tale villages, breathtaking Alps, and world-class chocolate and cheese in this picturesque European country."
   },
   {
     name: "JORDAN",
     imageUrl: "abroad/jordan.webp",
     tagline: "Where tradition meets skyscrapers 🏙️",
+    description: "Home to the ancient city of Petra, the vast Wadi Rum desert, and the therapeutic Dead Sea — a gem of the Middle East."
   },
 ];
 
@@ -50,41 +55,43 @@ const IndianLocations = [
     name: "AGRA (Taj Mahal, UP)",
     imageUrl: "/india/tajmahal.webp",
     tagline: "A symbol of eternal love ❤️",
+    description: "Home to the majestic Taj Mahal, Agra captures the essence of Mughal architecture and timeless romance. A must-visit for history and love enthusiasts."
   },
   {
     name: "JAIPUR (Rajasthan)",
     imageUrl: "/india/jaipur.webp",
     tagline: "The Pink City of Royals 👑",
+    description: "Step into a royal legacy with Jaipur's forts, palaces, vibrant bazaars, and pink-hued architecture — a gateway to Rajasthan’s regal charm."
   },
   {
     name: "GOA (Beaches)",
     imageUrl: "/india/goa.webp",
     tagline: "Sun, sand & serenity 🌊",
+    description: "India’s beach capital, Goa offers a perfect mix of lively parties, serene beaches, Portuguese heritage, and delicious coastal cuisine."
   },
   {
     name: "LEH–LADAKH (J&K)",
     imageUrl: "/india/kashmir.webp",
     tagline: "Adventure at the top of the world 🏔️",
+    description: "A dreamland for thrill-seekers and bikers, Leh–Ladakh stuns with its rugged mountains, crystal lakes, and peaceful monasteries above the clouds."
   },
   {
     name: "KERALA (Munnar/Alleppey)",
     imageUrl: "/india/kerla.webp",
     tagline: "God’s Own Country 🌴",
+    description: "Sail through lush backwaters, explore tea-covered hills in Munnar, and experience Ayurveda, wildlife, and culture in serene Kerala."
   },
   {
     name: "VARANASI (UP)",
     imageUrl: "/india/varanasi.webp",
     tagline: "Where spirituality flows with the Ganga 🙏",
+    description: "One of the world’s oldest living cities, Varanasi offers deep spiritual energy, sacred rituals, and timeless riverfront ghats on the Ganges."
   },
   {
     name: "ANDAMAN (Havelock)",
     imageUrl: "/india/andaman.webp",
     tagline: "The paradise of turquoise waters 🏝️",
-  },
-  {
-    name: "LEH–LADAKH (J&K)",
-    imageUrl: "/india/kashmir.webp",
-    tagline: "Adventure at the top of the world 🏔️",
+    description: "Escape to the serene islands of Andaman, with crystal-clear waters, coral reefs, white-sand beaches, and incredible marine life."
   },
 ];
 
@@ -297,9 +304,11 @@ export default function Home() {
         text=" Best Indian Places to Visit"
       />
 
-      <Packages title="Explore India Your Way" data={indiantour} />
-      <Packages title="Your Dream Honeymoon Awaits" data={honeymoon} />
-      <Packages title="Walk the Spiritual Paths of India" data={spiritual} />
+
+      <Packages title="Explore India Your Way" data={indiantour}/>
+       <Packages title="Your Dream Honeymoon Awaits" data={honeymoon}/>
+        <Packages title="Walk the Spiritual Paths of India" data={spiritual}/>
+
       <BookingPage />
       <Contact />
     </>

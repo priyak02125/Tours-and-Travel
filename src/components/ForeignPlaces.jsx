@@ -75,11 +75,12 @@ function FlipCard({ city }) {
         </div>
 
         {/* Back Side (Description) */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-cyan-500 text-white flex flex-col items-center justify-center p-4 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold font-kumbh-sans mb-2">
+        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-black/80 text-white flex flex-col items-center justify-center p-4 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold font-kumbh-sans mb-2 text-cyan-500">
             {city.name}
           </h3>
-          <p className="text-sm">{city.tagline}</p>
+          <p className="text-sm text-orange-400 font-bold">{city.tagline}</p>
+          <p className="text-sm text-">{city.description}</p>
         </div>
       </motion.div>
     </div>
