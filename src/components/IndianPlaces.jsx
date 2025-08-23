@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { ArrowBigRight, ArrowBigLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-// Arrows for the carousel
 function NextArrow(props) {
   const { onClick } = props;
   return (
@@ -59,8 +58,11 @@ export default function IndianPlaces({ location, text }) {
         <div className="relative py-10">
           <Slider {...sliderSettings}>
             {imagesToShow.map((city, index) => (
-              <div key={index} className={`${index % 2 === 1 ? "mt-10" : "mt-0"} p-2 `}>
-                <FlipCard city={city}  />
+              <div
+                key={index}
+                className={`${index % 2 === 1 ? "mt-10" : "mt-0"} p-2 `}
+              >
+                <FlipCard city={city} />
               </div>
             ))}
           </Slider>

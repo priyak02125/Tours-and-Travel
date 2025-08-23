@@ -14,9 +14,9 @@ export default function BookingPage() {
   return (
     <div
       id="booking"
-      className="font-kumbh-sans bg-gray-100 flex flex-col items-center py-12 px-4"
+      className="font-kumbh-sans bg-gray-100 flex flex-col items-center py-24 px-4"
     >
-      <h1 className="font-kumbh-sans text-4xl font-extrabold text-gray-900 tracking-wide text-center">
+      <h1 className="font-kumbh-sans pb-6 text-4xl font-extrabold text-gray-900 tracking-wide text-center">
         Book Your Trip
       </h1>
 
