@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowBigRight } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,7 +57,7 @@ const Header = () => {
               size={28}
               className="-rotate-45 transition-transform duration-300 group-hover:bg-orange-400  text-white bg-black rounded-full p-0.5 sm:p-1"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}

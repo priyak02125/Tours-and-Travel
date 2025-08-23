@@ -62,9 +62,7 @@ const settings = {
 
 function Packages({ title, data }) {
   return (
-    <div className="py-26 
-    
-    px-4 lg:px-40 bg-white w-full">
+    <div className="py-16  px-4 lg:px-40 bg-white w-full">
 
       {/* Heading */}
       <h2 className="text-xl md:text-3xl font-bold text-center text-cyan-500 mb-10">
@@ -112,17 +110,16 @@ function Packages({ title, data }) {
                 </div>
               </div>
 
-
-                {/* Price badge */}
-                <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium z-20">
-                  {card.price}
-                </div>
+              {/* Price badge */}
+              <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium z-20">
+                {card.price}
               </div>
             </div>
           </div>
-        ))}
-      </Slider>
-    </div>
+        ))
+        }
+      </Slider >
+    </div >
   );
 }
 
