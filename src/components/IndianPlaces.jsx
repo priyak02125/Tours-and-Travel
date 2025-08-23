@@ -1,7 +1,9 @@
 "use client";
 import Slider from "react-slick";
 import { ArrowBigRight, ArrowBigLeft } from "lucide-react";
-
+import { motion } from "framer-motion";
+import { useState } from "react";
+// Arrows for the carousel
 function NextArrow(props) {
   const { onClick } = props;
   return (
@@ -57,30 +59,55 @@ export default function IndianPlaces({ location, text }) {
         <div className="relative py-10">
           <Slider {...sliderSettings}>
             {imagesToShow.map((city, index) => (
-              <div key={index} className="p-2">
-                <div
-                  className={`${
-                    index % 2 === 1 ? "mt-16" : "mt-0"
-                  } relative overflow-hidden shadow-lg group rounded-xl`}
-                >
-                  <img
-                    src={city.imageUrl}
-                    alt={city.name}
-                    className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
-                    <h3 className="text-xl sm:text-2xl font-bold">
-                      {city.name}
-                    </h3>
-                    <p className="text-sm">{city.tagline}</p>
-                  </div>
-                </div>
+              <div key={index} className={`${index % 2 === 1 ? "mt-10" : "mt-0"} p-2 `}>
+                <FlipCard city={city}  />
               </div>
             ))}
           </Slider>
         </div>
       </main>
+    </div>
+  );
+}
+
+// FlipCard component
+function FlipCard({ city }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div
+      className={`relative h-96 perspective ${
+        isFlipped ? "z-20" : ""
+      } group rounded-xl`}
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        style={{ transformStyle: "preserve-3d" }}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Front Side */}
+        <div className="absolute inset-0 backface-hidden overflow-hidden rounded-xl">
+          <img
+            src={city.imageUrl}
+            alt={city.name}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl"></div>
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center px-2">
+            {/* <h3 className="text-xl sm:text-2xl font-bold">{city.name}</h3>
+            <p className="text-sm">{city.tagline}</p> */}
+          </div>
+        </div>
+
+        {/* Back Side */}
+        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-cyan-500 text-white flex flex-col items-center justify-center text-center px-4 rounded-xl">
+          <h3 className="text-xl sm:text-2xl font-bold mb-2">{city.name}</h3>
+          <p className="text-sm">{city.tagline}</p>
+        </div>
+      </motion.div>
     </div>
   );
 }

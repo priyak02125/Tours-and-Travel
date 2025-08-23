@@ -94,11 +94,11 @@ function Hero() {
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay text */}
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 text-white z-20">
-                  <h2 className="text-xl md:text-2xl font-semibold">
+                <div className="absolute bg-black/50 w-full bottom-0 left-0  bg-gradient-to-t from-black/90 via-black/30 to-transparent p-2 text-white z-20">
+                  <h2 className="text-xl md:text-2xl  text-center font-semibold">
                     {item.title}
                   </h2>
-                  <p className="text-sm md:text-base">{item.description}</p>
+                  <p className="text-sm md:text-base text-center">{item.description}</p>
                 </div>
               </div>
             </div>

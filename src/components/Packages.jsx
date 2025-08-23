@@ -62,10 +62,10 @@ const settings = {
 
 function Packages({ title, data }) {
   return (
-    <div
-      id="packages"
-      className="py-12 px-4 lg:px-40 bg-white w-full font-kumbh-sans antialiased"
-    >
+    <div className="py-26 
+    
+    px-4 lg:px-40 bg-white w-full">
+
       {/* Heading */}
       <h2 className="text-xl md:text-3xl font-bold text-center text-cyan-500 mb-10">
         Tours and Travel – <span className="text-gray-800">{title}</span>
@@ -89,7 +89,8 @@ function Packages({ title, data }) {
               <div className="p-4 text-center text-gray-800 font-semibold text-lg">
                 {card.description}
               </div> */}
-              <div className="relative h-54 w-full group">
+              <div className="relative group h-54 w-full group">
+
                 <img
                   src={card.photo}
                   alt={card.description}
@@ -97,11 +98,20 @@ function Packages({ title, data }) {
                 />
 
                 {/* Transparent curtain overlay */}
-                <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
-                  <p className="text-white font-semibold text-lg text-center z-10">
+                <div className="absolute h-0 top-0 group-hover:h-full duration-300 inset-0 bg-black/40 flex items-end justify-center ">
+                  <p className="text-white group-hover:my-auto px-4 font-semibold text-lg text-center z-10">
                     {card.description}
                   </p>
                 </div>
+                <div className="absolute bottom-0 text-xl bg-black/60 group-hover:h-0 duration-400 text-center text-white w-full">
+                  {card.location}
+                </div>
+                {/* Price badge */}
+                <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium z-20">
+                  {card.price}
+                </div>
+              </div>
+
 
                 {/* Price badge */}
                 <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 text-sm rounded-full font-medium z-20">
