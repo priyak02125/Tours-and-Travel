@@ -22,25 +22,25 @@ const Header = () => {
       <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-500 tracking-wider">
-          <a
+          <Link
             href="/"
             className="hover:opacity-80 transition-opacity duration-300"
           >
             Tours & Travel
-          </a>
+          </Link>
         </h1>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-4 lg:space-x-8 text-black text-base sm:text-lg font-medium">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="relative group scroll-smooth"
             >
               {item.name}
               <div className="absolute -bottom-2 left-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></div>
-            </a>
+            </Link>
           ))}
         </nav>
 
