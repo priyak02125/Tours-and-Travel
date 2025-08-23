@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function ForeignPlaces({ location, text }) {
   return (
     <div className="font-kumbh-sans antialiased bg-gray-100 min-h-screen text-black flex flex-col">
+
       <main className="container mx-auto px-4 py-8 flex-grow">
         {/* Heading */}
         <div className="text-center">
@@ -35,10 +36,9 @@ export default function ForeignPlaces({ location, text }) {
         </div>
 
         {/* Load More Button */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center">
           <button className="flex items-center space-x-2 text-lg font-semibold font-kumbh-sans text-gray-700 hover:text-cyan-500 transition-colors duration-300">
             <span>LOAD MORE</span>
-            <ArrowBigRight size={24} className="-rotate-90 text-gray-700" />
           </button>
         </div>
       </main>
