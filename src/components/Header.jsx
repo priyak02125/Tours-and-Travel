@@ -45,11 +45,10 @@ const Header = () => {
 
         {/* Book Now Button */}
         <div className="hidden lg:flex items-center space-x-2 lg:space-x-4">
-          <Link
-            href="/booking"
+          <a
+            href="#booking"
             className="group px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-400 text-white rounded-full text-xs sm:text-sm md:text-base font-semibold shadow-md 
             hover:bg-black transition-colors duration-300 flex items-center justify-center space-x-1 sm:space-x-2"
-
           >
             <span>Book Now</span>
             <ArrowBigRight
