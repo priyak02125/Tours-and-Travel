@@ -19,13 +19,13 @@ const cards = [
     title: "Tropical Paradise",
     description: "Relax on sun-kissed beaches with crystal clear waters.",
   },
-  {
-    photo: "/sydney-australia.jpg",
-    alt: "sydney-australias",
-    title: "Sydney Opera House & Harbour",
-    description:
-      "Explore the iconic Sydney Opera House and enjoy stunning harbour views.",
-  },
+  // {
+  //   photo: "/sydney-australia.jpg",
+  //   alt: "sydney-australias",
+  //   title: "Sydney Opera House & Harbour",
+  //   description:
+  //     "Explore the iconic Sydney Opera House and enjoy stunning harbour views.",
+  // },
   {
     photo: "/maldivesbeaches.jpg",
     alt: "maldives beaches",
