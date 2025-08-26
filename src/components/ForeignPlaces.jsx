@@ -1,88 +1,107 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import Slider from "react-slick";
+
 export default function ForeignPlaces({ location, text }) {
+  const [isFlipped, setIsFlipped] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    centerMode: true,
+    centerPadding: "0px",
+    arrows: true,
+    beforeChange: (_, next) => setCurrentSlide(next),
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 3, centerMode: true } },
+      { breakpoint: 768, settings: { slidesToShow: 2, centerMode: true } },
+      { breakpoint: 480, settings: { slidesToShow: 1, centerMode: true } },
+    ],
+  };
+
   return (
-    <div
-      id="foreign-places"
-      className=" font-kumbh-sans antialiased bg-gray-100 min-h-screen text-black flex flex-col lg:py-16"
-    >
-      <main className="container mx-auto px-4 py-8 flex-grow">
-        {/* Heading */}
-        <div className="text-center">
-          <h1 className="text-5xl py-4 lg:px-40 font-extrabold font-kumbh-sans text-gray-900 tracking-wide">
-            {text}
-          </h1>
-        </div>
+    <div className="font-kumbh-sans bg-gray-100 min-h-screen text-black flex flex-col items-center justify-center px-4">
+      <h1 className="text-4xl font-bold text-center my-10">{text}</h1>
 
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 lg:px-40 py-10 h-full">
-          {[
-            location.slice(0, 2),
-            location.slice(2, 5),
-            location.slice(5, 7),
-          ].map((col, colIndex) => (
-            <div
-              key={colIndex}
-              className={`grid ${
-                col.length === 3 ? "grid-rows-3" : "grid-rows-2"
-              } gap-6 lg:gap-8 h-screen`}
-            >
-              {col.map((city, index) => (
-                <FlipCard key={index} city={city} />
-              ))}
-            </div>
-          ))}
-        </div>
+      <div className="w-full max-w-6xl">
+        <Slider {...settings}>
+          {location.map((city, index) => {
+            const isActive = currentSlide === index;
 
-        {/* Load More Button */}
-        <div className="flex justify-center">
-          <button className="flex items-center space-x-2 text-lg font-semibold font-kumbh-sans text-gray-700 hover:text-cyan-500 transition-colors duration-300">
-            <span>LOAD MORE</span>
-          </button>
-        </div>
-      </main>
+            return (
+              <div
+                key={index}
+                className={`px-1 transition-transform duration-300 ${
+                  isActive
+                    ? "scale-110 -translate-y-5 z-20"
+                    : "scale-90 translate-y-2 z-10"
+                }`}
+              >
+                <div className="w-full h-[350px]">
+                  <FlipCard
+                    city={city}
+                    isFlipped={isFlipped === index}
+                    isActive={isActive}
+                    onMouseEnter={() => setIsFlipped(index)}
+                    onMouseLeave={() => setIsFlipped(null)}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 }
 
-// Flip Card Component
-function FlipCard({ city }) {
-  const [isFlipped, setIsFlipped] = useState(false);
-
+// FlipCard Component
+function FlipCard({ city, isFlipped, isActive, onMouseEnter, onMouseLeave }) {
   return (
     <div
-      className="relative h-full perspective"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      className="relative h-full [perspective:1000px]"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
-      <motion.div
-        className="relative w-full h-full"
+      <div
+        className={`relative w-full h-full transition-transform duration-[800ms] ${
+          isActive ? "rounded-2xl" : "rounded-md"
+        }`}
         style={{
           transformStyle: "preserve-3d",
+          transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.6 }}
       >
-        {/* Front Side (Image) */}
-        <div className="absolute inset-0 backface-hidden overflow-hidden">
+        {/* Front Side */}
+        <div
+          className={`absolute inset-0 top-10 backface-hidden overflow-hidden shadow-lg w-full h-auto ${
+            isActive ? "rounded-xl" : "rounded-md"
+          }`}
+        >
           <img
             src={city.imageUrl}
             alt={city.name}
-            className="w-full h-full rounded-md object-cover"
+            className="w-full h-full object-fit"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
         </div>
 
-        {/* Back Side (Description) */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-black/80 text-white flex flex-col items-center justify-center p-4 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold font-kumbh-sans mb-2 text-cyan-500">
-            {city.name}
-          </h3>
-          <p className="text-sm text-orange-400 font-bold">{city.tagline}</p>
-          <p className="text-sm text-">{city.description}</p>
+        {/* Back Side */}
+        <div
+          className={`absolute inset-0 top-10 backface-hidden rotate-y-180 overflow-hidden bg-black/80 flex flex-col items-center justify-center p-4 text-center w-full h-full ${
+            isActive ? "rounded-xl" : "rounded-md"
+          }`}
+        >
+          <h3 className="text-xl font-bold text-cyan-500 mb-2">{city.name}</h3>
+          <p className="text-sm text-cyan-500 font-semibold">{city.tagline}</p>
+          <p className="text-sm mt-2 text-white">{city.description}</p>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
