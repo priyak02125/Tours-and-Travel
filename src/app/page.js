@@ -8,19 +8,19 @@ import Contact from "@/components/Conatct";
 const worldWide = [
   {
     name: "DUBAI",
-    imageUrl: "abroad/dubai.webp",
+    imageUrl: "/dubai.jpg",
     tagline: "Desert dreams & futuristic wonders 🌟",
     description: "Experience the dazzling skyline, luxury shopping, and desert safaris of Dubai — a city where innovation meets tradition."
   },
   {
     name: "SINGAPORE",
-    imageUrl: "abroad/singapore.webp",
+    imageUrl: "/singapore.jpg",
     tagline: "A city in a garden 🌸",
     description: "A blend of modern architecture, rich culture, and green spaces. Explore Marina Bay, Sentosa Island, and world-famous street food."
   },
   {
     name: "BALI",
-    imageUrl: "abroad/bali.webp",
+    imageUrl: "/bali.jpg",
     tagline: "Island of gods & hidden beaches 🌴",
     description: "Unwind on serene beaches, explore lush jungles and rice terraces, and immerse yourself in the spiritual culture of Bali."
   },
@@ -32,13 +32,13 @@ const worldWide = [
   },
   {
     name: "THAILAND",
-    imageUrl: "abroad/thailand.webp",
+    imageUrl: "/thailand.jpg",
     tagline: "The land of smiles & street food 🍜",
     description: "From the bustling streets of Bangkok to the tranquil islands of Phuket and Krabi, Thailand offers adventure, culture, and cuisine."
   },
   {
     name: "SWITZERLAND",
-    imageUrl: "abroad/switzerland.webp",
+    imageUrl: "/switzerland.avif",
     tagline: "Snow peaks & chocolate dreams 🍫🏔️",
     description: "Discover fairy-tale villages, breathtaking Alps, and world-class chocolate and cheese in this picturesque European country."
   },

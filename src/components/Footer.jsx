@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-between text-center md:text-left">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Tours & Travel</h3>
+            <h3 className="text-lg font-semibold mb-4"> Paryatan Sarathi</h3>
             <p className="text-sm lg:w-48">
               Explore the world with us. Discover breathtaking destinations,
               affordable packages, and unforgettable memories.

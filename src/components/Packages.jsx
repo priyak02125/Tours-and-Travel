@@ -63,7 +63,7 @@ function Packages({ title, data }) {
     <div className="py-16 px-4 lg:px-40 bg-white w-full">
       {/* Heading */}
       <h2 className="text-xl md:text-3xl font-bold text-center text-cyan-500 mb-10">
-        Tours and Travel – <span className="text-gray-800">{title}</span>
+        Paryatan Sarathi – <span className="text-gray-800">{title}</span>
       </h2>
 
       {/* Slider */}
@@ -81,16 +81,17 @@ function Packages({ title, data }) {
                 />
 
                 {/* Transparent overlay with description */}
-                <div className="absolute inset-0 bg-black/40 flex items-end justify-center h-0 group-hover:h-full duration-300 rounded-t-full">
+                <div className="absolute inset-0 bg-black/40 flex items-end justify-center h-0 group-hover:h-full duration-300 rounded-t-full z-20">
                   <p className="text-white group-hover:my-auto px-4 font-semibold text-lg text-center z-10">
                     {card.description}
                   </p>
                 </div>
 
                 {/* Location at bottom */}
-                <div className="absolute bottom-0 text-xl py-1 bg-black/60 text-center text-white w-full group-hover:h-0 duration-300">
+                <div className="absolute bottom-0 text-xl py-1 bg-black/60 text-center text-white w-full transition-opacity duration-300 z-10 group-hover:opacity-0">
                   {card.location}
                 </div>
+
 
                 {/* Price badge */}
                 <div className="absolute top-10 left-20 bg-black/70 text-white px-3 py-1 text-sm rounded-md font-medium z-20">

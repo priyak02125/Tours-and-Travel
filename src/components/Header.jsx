@@ -21,12 +21,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg font-sans font-kumbh-sans text-black">
       <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-500 tracking-wider">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-teal-600 tracking-wide" style={{ fontFamily: "'Poppins', sans-serif" }}>
           <Link
             href="/"
-            className="hover:opacity-80 transition-opacity duration-300"
+            className="hover:text-teal-800 transition-colors duration-300"
           >
-            Tours & Travel
+            Paryatan Sarathi
           </Link>
         </h1>
 
@@ -73,9 +73,8 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-md transform origin-top transition-all duration-300 ease-in-out 
-        ${
-          isMobileMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
-        }`}
+        ${isMobileMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+          }`}
       >
         <nav className="flex flex-col items-center py-4 space-y-3 sm:space-y-4 text-black text-sm sm:text-base">
           {navItems.map((item) => (
